@@ -35,5 +35,7 @@ RUN cp /srv/.env.example /srv/.env
 
 ## 수정된 레이어 적용하기
 레이어를 적용하려면 컨테이너를 다시 빌드 해야 한다.
+```
 $ docker-compose stop
 $ docker-compose build
+```
