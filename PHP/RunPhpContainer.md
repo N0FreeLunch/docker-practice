@@ -20,12 +20,12 @@ docker exec –it 컨테이너_아이디 bash
 
 
 ## php.ini 파일 만들어서 도커 컨테이너에 넣기
-php.ini 파일을 만들 config 폴더를 만든다.
+- php.ini 파일을 만들 config 폴더를 만든다.
 ```
 mkdir config/
 ```
 
-폴더 내부에 php.ini 파일을 만든다.
+- 폴더 내부에 php.ini 파일을 만든다.
 ```
 echo "date.timezone = Asia/Tokyo" >> config/php.ini
 ```
@@ -35,7 +35,7 @@ echo "date.timezone = Asia/Seoul" >> config/php.ini
 ```
 
 ## php.ini 파일 컨테이너에 배치
-COPY 명령어를 통해서 php.ini 파일을 도커 컨테이너 내부의 php가 설치된 곳인 /usr/local/etc/php/ 경로에 배치
+- COPY 명령어를 통해서 php.ini 파일을 도커 컨테이너 내부의 php가 설치된 곳인 /usr/local/etc/php/ 경로에 배치
 ```
 FROM php:7.1.9-apache
 
@@ -50,4 +50,4 @@ LABEL maintainer="N0FreeLunch“
 COPY config/php.ini /usr/local/etc/php/
 COPY index.php /var/www/html
 ```
-이렇게 추가
+- 위와 같이 `COPY config/php.ini /usr/local/etc/php/` 코드 추가
