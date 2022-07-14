@@ -122,3 +122,25 @@ $ mysql -u root -h mariadb -ppassword
 $ mysql -u root -h db -ppassword
 ```
 - 컨테이너 내부에서 링크 별칭을 이요하여 접속한다.
+
+
+## 라라벨 루멘의 기본 마이그레이션 실행해서 프로젝트 구성하기
+```
+# Run the containers and jump into the app container
+$ docker-compose up
+$ docker ps # note the app container id
+$ docker exec -it 6a50b2398826bash
+```
+- 루멘이 설치되어 있는 app 컨테이너로 접속하기
+
+```
+# Inside the app container, navigate to the project
+# and run the migrate command
+$ cd/srv/app
+$ php artisan migrate
+Migration table created successfully.
+Nothing to migrate.
+```
+- 루멘 프로젝트의 root 경로에서 마이그레이션 명령어 실행하기
+- 루멘의 기본 마이그레이션을 실행하여 프로젝트 구동에 필요한 데이터베이스의 최소 조건을 만족하였다.
+  
