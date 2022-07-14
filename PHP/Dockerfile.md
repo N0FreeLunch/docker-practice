@@ -1,9 +1,9 @@
 ## Dockerfile 만들기
-프로젝트 폴더 내에 도커 파일 만들기
-특별히 경로를 지정하지 않아서 현재 CLI 경로에 만들어 지게 된다.
+- 프로젝트 폴더 내에 도커 파일 만들기
 ```
 touch Dockerfile docker-compose.yml index.php
 ```
+- 특별히 경로를 지정하지 않아서 현재 CLI 경로에 만들어 지게 된다.
 
 ## `Dockerfile`이란 파일에 명령어 정의하기
 ```
