@@ -4,7 +4,7 @@
 
 ## docker compose에 데이터베이스 컨테이너 실행 코드 작성하기
 ```
-version:"3" 
+version: "3" 
 services:
   app:
     build: .
